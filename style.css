@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  /* Quita el margen blanco que el navegador pone por defecto */
+
+  min-height: 100vh;
+  /* El fondo cubre al menos toda la altura visible de la pantalla */
+
+  display: flex;
+  flex-direction: column;
+  /* Acomoda el contenido en columna: calculadora arriba, historial abajo */
+
+  align-items: center;
+  justify-content: center;
+  /* Centra todo horizontal y verticalmente */
+
+  gap: 15px;
+  /* Espacio entre la calculadora y la caja de historial */
+
+  background-color: #fff3c4;
+  /* Amarillo pastel de fondo para toda la página */
+
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+  /* box-sizing evita que el padding sume ancho extra al elemento */
+}
+
+.calculadora {
+  background-color: #ffffff;
+  /* La calculadora es blanca, para resaltar sobre el fondo amarillo */
+
+  padding: 20px;
+  border-radius: 15px;
+  /* Redondea las esquinas de la calculadora completa */
+
+  width: 260px;
+  /* Ancho fijo para toda la calculadora */
+}
+
+#pantalla {
+  background-color: #fdf6e3;
+  /* Amarillo muy suave para la pantalla */
+
+  color: #333;
+  font-size: 28px;
+
+  text-align: right;
+  /* Los números se alinean a la derecha, como en cualquier calculadora */
+
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+
+  overflow-x: auto;
+  /* Si el número es muy largo, aparece una barra para desplazarse */
+
+  white-space: nowrap;
+  /* El texto nunca se parte en varias líneas */
+}
+
+.fila {
+  display: flex;
+  /* Pone los botones de cada fila uno al lado del otro */
+
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+button {
+  flex: 1;
+  /* Todos los botones de una fila ocupan el mismo ancho */
+
+  padding: 15px 0;
+  font-size: 18px;
+  cursor: pointer;
+  /* Cambia el cursor a "manito" al pasar por encima */
+
+  border: 2px solid transparent;
+  /* Borde invisible por defecto, para que no "salte" el tamaño al hacer hover */
+
+  border-radius: 10px;
+  background-color: #fef9e7;
+
+  transition: 0.15s;
+  /* Hace que el cambio de color/sombra al pasar el mouse sea suave */
+}
+
+button:hover {
+  /* Estilo que se aplica SOLO cuando el mouse está encima */
+
+  border-color: #f0c419;
+  /* Aparece el borde amarillo fuerte */
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  /* Sombra ligera, solo en ese botón */
+}
+
+.btn-operador {
+  background-color: #ffe4a3;
+  /* Amarillo más fuerte, para diferenciar los operadores */
+  color: #7a5c00;
+  font-weight: bold;
+}
+
+.btn-especial {
+  background-color: #ffd6d6;
+  /* Rosado suave para AC y borrar */
+  color: #b33636;
+  font-weight: bold;
+}
+
+.btn-igual {
+  flex: 2;
+  /* El botón "=" ocupa el doble de espacio que los demás */
+  background-color: #b7dfa8;
+  /* Verde pastel, para destacar como acción final */
+  color: #2f5c26;
+  font-weight: bold;
+}
+
+.btn-cero {
+  flex: 2;
+  /* El botón "0" también ocupa el doble de espacio, como en calculadoras reales */
+}
+

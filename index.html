@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <script src="script.js" defer></script>
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/9a347b5868.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+  <!-- ===================== CALCULADORA ===================== -->
+  <div class="calculadora">
+
+    
+    <div id="pantalla" data-valor="0">0</div>
+
+    <!-- Aquí se ubica el código para reiniciar, borrar, dividir, porcentaje --> // 
+    <div class="fila">
+      <button id="btnAC" class="btn-especial">AC</button>
+      <button id="btnBorrar" class="btn-especial">
+        <i class="fa-solid fa-delete-left"></i></button> <!-- ícono de borrar que salió de font awesome -->
+      </button>
+      
+      <button class="btn-operador" data-operador="/">
+        <i class="fa-solid fa-divide" style="color: #7a5c00"></i> <!-- ícono de división que salió de font awesome -->
+      </button>
+      <button class="btn-operador" data-operador="%">
+        <i class="fa-solid fa-percent" style="color: #7a5c00"></i> <!-- ícono de porcentaje que salió de font awesome -->
+      </button>
+    </div>
+
+    <!-- Aquí se ubican los números 7, 8, 9 y multiplicación -->
+    <div class="fila">
+      <!-- data-numero guarda qué dígito representa este botón -->
+      <button class="btn-numero" data-numero="7">7</button>
+      <button class="btn-numero" data-numero="8">8</button>
+      <button class="btn-numero" data-numero="9">9</button>
+      <button class="btn-operador" data-operador="*">
+        <i class="fa-solid fa-xmark" style="color:  #7a5c00;"></i> <!-- ícono de multiplicaión que salió de font awesome -->
+      </button>
+    </div>
+
+    <!-- Aquí se ubican los números 4, 5, 6 y resta -->
+    <div class="fila">
+      <button class="btn-numero" data-numero="4">4</button>
+      <button class="btn-numero" data-numero="5">5</button>
+      <button class="btn-numero" data-numero="6">6</button>
+      <button class="btn-operador" data-operador="-">
+        <i class="fa-solid fa-minus" style="color:  #7a5c00;"></i> <!-- ícono de resta que salió de font awesome -->
+      </button>
+    </div>
+
+    <!-- Aquí se ubican los números 1, 2, 3 y suma -->
+    <div class="fila">
+      <button class="btn-numero" data-numero="1">1</button>
+      <button class="btn-numero" data-numero="2">2</button>
+      <button class="btn-numero" data-numero="3">3</button>
+      <button class="btn-operador" data-operador="+">
+        <i class="fa-solid fa-plus" style="color:  #7a5c00;"></i> <!-- ícono de suma que salió de font awesome -->
+      </button>
+    </div>
+
+    <!-- Aquí se ubica el código para cero, coma decimal e igual -->
+    <div class="fila">
+      <button class="btn-numero btn-cero" data-numero="0">0</button>
+      <button class="btn-numero" data-numero=",">,</button>
+      <button id="btnIgual" class="btn-igual">
+        <i class="fa-solid fa-equals" style="color: #264d20;"></i> <!-- ícono de igual que salió de font awesome -->
+      </button>
+    </div>
+  </div>
+
+</body>
+</html>
