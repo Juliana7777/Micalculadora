@@ -17,7 +17,7 @@ let ultimoResultado = null
 
 // ================== BUCLE for ==================
 let contadorBotones = 0
-for (let i = 0 i < todosLosBotones.length i++) {
+for (let i = 0; i < todosLosBotones.length; i++) {
   contadorBotones = contadorBotones + 1
 }
 console.log('La calculadora tiene ' + contadorBotones + ' botones')
